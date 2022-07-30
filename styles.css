@@ -16,6 +16,7 @@ body {
   background: linear-gradient(to right, #c33764, #1d2671); */
   background: #0b0c10;
   background: linear-gradient(to right, #0b0c10, #1f2833);
+  -webkit-user-select: none;
 }
 thead,
 tbody {
