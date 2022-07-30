@@ -44,7 +44,8 @@ tbody {
   padding: 10px;
   border-radius: 10px;
   background-color: #f6ebf4;
-  box-shadow: 2px 2px 20px #ed0b705f; /*#4cbfa65f */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 td,
 th {
