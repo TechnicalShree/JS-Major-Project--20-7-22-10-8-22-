@@ -9,7 +9,7 @@ function calender() {
 
   let calenderHtml = "";
 
-  const weekDay = ["Sun", "mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const weekDay = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const yearMonth = [
     "January",
     "February",
@@ -86,6 +86,14 @@ function tableBody(year, month, today) {
   }
 
   return body.toString();
+}
+
+function prevMonth() {
+  alert("previous month functionality updating soon...");
+}
+
+function nextMonth() {
+  alert("next month functionality updating soon...");
 }
 
 calender();
