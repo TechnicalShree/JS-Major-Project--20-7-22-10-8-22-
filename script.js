@@ -1,12 +1,11 @@
 const calenderTag = document.querySelector(".calender");
+const calendarData = new Date();
+let year = calendarData.getFullYear();
+let month = calendarData.getMonth();
+let day = calendarData.getDay();
+let today = calendarData.getDate();
 
 function calender() {
-  const calendarData = new Date();
-  let year = calendarData.getFullYear();
-  let month = calendarData.getMonth();
-  let day = calendarData.getDay();
-  let today = calendarData.getDate();
-
   let calenderHtml = "";
 
   const weekDay = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -26,6 +25,8 @@ function calender() {
   ];
 
   calendarData.setDate(1);
+  calendarData.setMonth(month);
+  calendarData.setFullYear(year);
 
   calenderHtml = `
     <table>
@@ -44,14 +45,14 @@ function calender() {
             </tr>
         </thead>
         <tbody>
-            ${tableBody(year, month, today)}
+            ${tableBody()}
         </tbody>
     </table>
     `;
   calenderTag.innerHTML = calenderHtml;
 }
 
-function tableBody(year, month, today) {
+function tableBody() {
   let start = new Date(year, month, 1).getDay();
   let days = new Date(year, month + 1, 0).getDate();
   let body = "";
@@ -89,11 +90,23 @@ function tableBody(year, month, today) {
 }
 
 function prevMonth() {
-  alert("previous month functionality updating soon...");
+  if (month === 0) {
+    month = 11;
+    year--;
+  } else {
+    month = month - 1;
+  }
+  calender();
 }
 
 function nextMonth() {
-  alert("next month functionality updating soon...");
+  if (month === 11) {
+    month = 0;
+    year++;
+  } else {
+    month = month + 1;
+  }
+  calender();
 }
 
 calender();
