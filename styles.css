@@ -45,12 +45,8 @@ th {
   border-radius: 50%;
   transition: ease-out;
 }
-.month {
-  width: 100px;
-  text-align: center;
-}
-.year {
-  width: 50px;
+.monthYear {
+  width: 150px;
   text-align: center;
 }
 .blank {
