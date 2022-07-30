@@ -27,7 +27,7 @@ tbody {
 }
 .calender {
   width: auto;
-  height: auto;
+  height: 370px;
   padding: 10px;
   border-radius: 10px;
   background-color: rgb(69, 162, 158);
@@ -44,6 +44,14 @@ th {
   background-color: rgb(72, 174, 169);
   border-radius: 50%;
   transition: ease-out;
+}
+.month {
+  width: 100px;
+  text-align: center;
+}
+.year {
+  width: 50px;
+  text-align: center;
 }
 .blank {
   cursor: default;

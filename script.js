@@ -33,8 +33,8 @@ function calender() {
         <thead>
             <tr>
                 <th onclick="prevMonth()"><<//th>
-                <th>${yearMonth[month]}</th>
-                <th>${year}</th>
+                <th class='month'>${yearMonth[month]}</th>
+                <th class='year'>${year}</th>
                 <th onclick="nextMonth()">><//th>
             </tr>
             <tr>
