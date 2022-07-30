@@ -67,15 +67,15 @@ function tableBody(year, month, today) {
       body += "<tr>";
     }
     if (i === today + start - 1) {
-      body += `<td class='today'>${i - start + 1}</td>`;
+      body += `<td class='today date'>${i - start + 1}</td>`;
       if (i % 7 === 6) {
         body += "</tr>";
       }
     } else if (i % 7 === 6) {
-      body += `<td>${i - start + 1}</td>`;
+      body += `<td class='date'>${i - start + 1}</td>`;
       body += "</tr>";
     } else {
-      body += `<td>${i - start + 1}</td>`;
+      body += `<td class='date'>${i - start + 1}</td>`;
     }
   }
   for (; i < days + start + (7 - ((days + start) % 7)); i++) {

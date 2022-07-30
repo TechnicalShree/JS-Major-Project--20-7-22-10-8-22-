@@ -37,12 +37,11 @@ th {
   height: 40px;
   text-align: center;
   cursor: pointer;
-  transition: 0.5s ease-out;
+  transition: 0.5s ease-in;
 }
-td:hover {
+.date:hover {
   background-color: rgb(72, 174, 169);
   border-radius: 50%;
-
   transition: ease-out;
 }
 .blank {
