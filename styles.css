@@ -9,12 +9,41 @@
 body {
   width: 100%;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: #d4ece4;
+  transition: 0.5s ease-in;
   -webkit-user-select: none;
 }
+
+h1 {
+  margin-bottom: 15px;
+  transition: 0.5s ease-in;
+}
+input {
+  appearance: none;
+}
+p {
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+input:checked ~ .calender {
+  background: #121212;
+}
+
+input:checked ~ h1,
+input:checked ~ label p,
+input:checked ~ .calender table thead tr th,
+input:checked ~ .calender table thead tr td,
+input:checked ~ .calender table tbody tr td {
+  color: #fff;
+}
+input:checked ~ .calender table tbody tr .today {
+  background: #bb86fc;
+}
+input:checked ~ .calender table tbody tr .date:hover {
+  background: #292929;
+}
+body,
 thead,
 tbody,
 table,
@@ -43,6 +72,7 @@ tbody {
   height: 370px;
   padding: 10px;
   border-radius: 10px;
+  transition: 0.5s ease-in;
   background-color: #f6ebf4;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
