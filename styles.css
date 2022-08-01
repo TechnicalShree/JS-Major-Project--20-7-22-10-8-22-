@@ -60,7 +60,8 @@ input:checked ~ .calender table tbody tr td {
 input:checked ~ .calender table tbody tr .today {
   background: #bb86fc;
 }
-input:checked ~ .calender table tbody tr .date:hover {
+input:checked ~ .calender table tbody tr .date:hover,
+input:checked ~ .calender table tbody tr .month:hover {
   background: #292929;
 }
 input:checked ~ label #themeCheck::before {
@@ -148,7 +149,7 @@ th {
   margin: auto;
 }
 .month:hover {
-  background-color: #ed0b7055;
+  background-color: #d4ece4;
   transition: ease-out;
   cursor: pointer;
 }
