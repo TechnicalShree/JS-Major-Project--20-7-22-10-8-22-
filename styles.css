@@ -13,7 +13,6 @@ body {
   transition: 0.5s ease-in;
   -webkit-user-select: none;
 }
-
 h1 {
   margin-bottom: 15px;
   transition: 0.5s ease-in;
@@ -24,6 +23,27 @@ input {
 p {
   margin-bottom: 15px;
   cursor: pointer;
+}
+#themeCheck {
+  position: relative;
+  width: 20px;
+  height: 5px;
+  background-color: #292929;
+  border-radius: 3px;
+  left: 0;
+  transform: translateY(-8px);
+}
+#themeCheck::before {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  left: 0;
+  background: #121212;
+  transition: 0.5s cubic-bezier(0.24, 0.45, 0.2, 1.47);
+  box-shadow: 0 0 8px #000;
+  transform: translate(-50%, -37%);
 }
 
 input:checked ~ .calender {
@@ -43,16 +63,29 @@ input:checked ~ .calender table tbody tr .today {
 input:checked ~ .calender table tbody tr .date:hover {
   background: #292929;
 }
+input:checked ~ label #themeCheck::before {
+  box-shadow: 0 0 8px #ccc;
+  left: 20px;
+  background: #fff;
+}
+input:checked ~ label #themeCheck {
+  background-color: #d4ece4;
+}
 body,
 thead,
 tbody,
 table,
 tbody,
-.month {
+.month,
+label {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+label {
+  flex-direction: row;
+  gap: 20px;
 }
 table {
   width: 100%;
@@ -86,7 +119,7 @@ th {
   color: #482673;
 }
 .date:hover {
-  background-color: #ed0b7066;
+  background-color: #d4ece4;
   border-radius: 50%;
   transition: ease-out;
   cursor: pointer;
