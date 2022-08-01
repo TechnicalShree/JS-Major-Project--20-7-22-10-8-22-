@@ -41,7 +41,7 @@ p {
   border-radius: 50%;
   left: 0;
   background: #121212;
-  transition: 0.5s cubic-bezier(0.24, 0.45, 0.2, 1.47);
+  transition: 0.8s cubic-bezier(0.72, 1.11, 0.37, 1.64);
   box-shadow: 0 0 8px #000;
   transform: translate(-50%, -37%);
 }
